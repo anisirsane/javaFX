@@ -4,5 +4,6 @@
         "C:/Users/anisi/OneDrive/Bureau/PROG1284/java/javafx-sdk-21.0.1/lib"
     ],
     "maven.executable.path": "C:/Users/anisi/OneDrive/Bureau/PROG1284/maven/apache-maven-3.9.5/bin/mvn",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.debug.settings.onBuildFailureProceed": true
 }
