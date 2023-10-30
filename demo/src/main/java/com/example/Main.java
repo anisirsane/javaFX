@@ -43,7 +43,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) {
         Text text1 = new Text("Temperature actuelle:");       
-        // Text text3 = new Text(value.get(0));    
         Text text3 = new Text(val);       
    
 
@@ -51,9 +50,7 @@ public class Main extends Application {
 
  //Creating a Grid Pane 
       GridPane gridPane = new GridPane();    
-      //Setting size for the pane 
-      //gridPane.setMinSize(300, 200);
-      
+
       //Setting the padding  
       gridPane.setPadding(new Insets(10, 10, 10, 10)); 
       
@@ -78,43 +75,16 @@ public class Main extends Application {
     //chart
 
 
-
-
-
-        final CategoryAxis xAxis = new CategoryAxis();
-        final NumberAxis yAxis = new NumberAxis();
-         xAxis.setLabel("time");
-        final LineChart<String,Number> lineChart = 
-                new LineChart<String,Number>(xAxis,yAxis);
        
-        lineChart.setTitle("Valeur temperature pour le DHT11");
-                          
-        XYChart.Series series1 = new XYChart.Series();
-        series1.setName("Temperatures");
-        
-        series1.getData().add(new XYChart.Data("12:00:00",1));
-        // series1.getData().add(new XYChart.Data("12:00:05", value.get(1)));
-        // series1.getData().add(new XYChart.Data("12:00:10", value.get(2)));
-        // series1.getData().add(new XYChart.Data("12:00:15", value.get(3)));
-        // series1.getData().add(new XYChart.Data("12:00:20", value.get(4)));
-        // series1.getData().add(new XYChart.Data("12:00:25", value.get(5)));
-        // series1.getData().add(new XYChart.Data("12:00:30", value.get(6)));
-        // series1.getData().add(new XYChart.Data("12:00:35", value.get(7)));
-        // series1.getData().add(new XYChart.Data("12:00:40", value.get(8)));
-        // series1.getData().add(new XYChart.Data("12:00:45", value.get(9)));
-        // series1.getData().add(new XYChart.Data("12:00:50", value.get(10)));
-        // series1.getData().add(new XYChart.Data("12:00:55", value.get(11)));
+
         
 
-        // Creating a scene object 
-        lineChart.getData().add(series1);
-        SubScene scene = new SubScene(gridPane,300,100); 
-
-        SubScene scene1  = new SubScene(lineChart,800,600);     
+        SubScene scene = new SubScene(gridPane,300,300); 
+     
         VBox root = new VBox(10);  
         root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(scene1,scene);
-        Scene mainScene = new Scene(root,850,750);
+        root.getChildren().addAll(scene);
+        Scene mainScene = new Scene(root,300,300);
         primaryStage.setScene(mainScene);
         primaryStage.show();
 
